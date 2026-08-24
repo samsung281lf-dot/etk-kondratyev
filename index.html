@@ -73,7 +73,7 @@
     padding: 1.75rem 1.5rem 4rem;
   }
 
-  #view-dossier[hidden], #view-method[hidden], #view-gallery[hidden] { display: none; }
+  #view-dossier[hidden], #view-method[hidden], #view-gallery[hidden], #view-garage[hidden] { display: none; }
 
   /* ---------- Tab nav ---------- */
   .tabs {
@@ -674,6 +674,7 @@
   <a class="tab" href="#dossier" data-view="dossier">Досье</a>
   <a class="tab" href="#method" data-view="method">Творчество и «Синефантом»</a>
   <a class="tab" href="#gallery" data-view="gallery">Материалы</a>
+  <a class="tab" href="#garage" data-view="garage">«Асса» и «Нанайнана»</a>
 </nav>
 <div class="tabs-rule"><span></span></div>
 
@@ -1001,6 +1002,53 @@
 
   </div>
 
+  <div id="view-garage" hidden>
+
+    <div class="hero-m">
+      <p class="label">Досье · показ</p>
+      <h1>«Асса» и «Нанайнана»</h1>
+      <p class="lede">Сдвоенный сеанс музея <b>«Гараж»</b> сводит культовую «Ассу» Сергея Соловьёва с шестиминутной «Нанайнаной» Кондратьева — тем самым фильмом, чьи кадры вошли во «второй сон Бананана».</p>
+    </div>
+
+    <div class="filmstrip" role="presentation"></div>
+
+    <section aria-labelledby="ev-h">
+      <span class="label kicker">Показ</span>
+      <h2 id="ev-h">Программа</h2>
+      <div class="retro-box">
+        <div class="retro-meta">
+          <span>Музей «Гараж», зал LAB</span>
+          <span>14 августа 2026</span>
+          <span>18:00–22:00</span>
+          <span>билет 250–500 ₽</span>
+        </div>
+        <p style="margin:0;">Часть цикла «Искусство на частоте 1980-х». Показ открывает видеоприветствие Евгения Кондратьева; после фильмов — разговор с киноведом Всеволодом Коршуновым и режиссёрами, учившимися в последней мастерской Соловьёва во ВГИКе.</p>
+      </div>
+    </section>
+
+    <section aria-labelledby="assa-h">
+      <span class="label kicker">Фильм Соловьёва</span>
+      <h2 id="assa-h">«Асса»</h2>
+      <p>Одна из самых известных картин позднесоветского кино. История любовного треугольника между Аликой, музыкантом Банананом и криминальным авторитетом Крымовым разворачивается в зимней Ялте начала 1980-х. Задуманная как подражание популярному тогда болливудскому кино с песнями и танцами, «Асса» стала портретом поколения на сломе эпох — и при этом обрела почти документальную интонацию: в образе героя и декорациях его жизни проступает эпоха расцвета неофициальной художественной культуры, квартирных выставок и нелегальных концертов.</p>
+      <p>В фильме звучит музыка групп «Аквариум», «Браво» и «Кино», появляются объекты Сергея Шутова и Михаила Рошаля-Фёдорова, работы Николы Овчинникова, анимация Сергея Бугаева. Все эти элементы существовали до фильма и независимо от него — одним из них была шестиминутная «Нанайнана» Евгения Кондратьева.</p>
+    </section>
+
+    <section aria-labelledby="nanai-h">
+      <span class="label kicker">Фильм Кондратьева</span>
+      <h2 id="nanai-h">Как «Нанайнана» попала в «Ассу»</h2>
+      <p>Кондратьев (тогда уже известный под псевдонимом «Дебил»), участник независимой студии «Мжалалафильм», рассказывал, что Соловьёв впервые увидел «Нанайнану» на специально организованном показе московского и ленинградского киноандеграунда. Стремительный монтаж и свободная смена образов подсказали Соловьёву решение для второго сна Бананана — куда и вошли фрагменты картины Кондратьева.</p>
+    </section>
+
+    <section class="sources" aria-labelledby="g-src-h" style="margin-top: 2.75rem;">
+      <h2 id="g-src-h" style="font-size:1.1rem; font-weight: 500; letter-spacing: 0.02em; margin-bottom: 0.8rem;">Источники</h2>
+      <ul>
+        <li>«Показ фильмов «Асса» и «Нанайнана»» — Музей «Гараж», garagemca.org/event/film-screening-assa-and-nananaina</li>
+      </ul>
+      <footer class="colophon">Составлено по анонсу показа в справочных целях. Не является официальной страницей музея «Гараж» или показа.</footer>
+    </section>
+
+  </div>
+
 </main>
 
 <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Просмотр изображения">
@@ -1014,7 +1062,7 @@
 
 <script>
 (function () {
-  var views = ['dossier', 'method', 'gallery'];
+  var views = ['dossier', 'method', 'gallery', 'garage'];
   function apply() {
     var hash = (location.hash || '#dossier').slice(1);
     if (views.indexOf(hash) === -1) hash = 'dossier';
