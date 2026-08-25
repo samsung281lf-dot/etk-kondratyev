@@ -81,27 +81,21 @@
     top: 0;
     z-index: 5;
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-end;
-    gap: 0.3rem;
+    gap: 0.4rem 0.4rem;
     max-width: 46rem;
     margin: 0 auto;
-    padding: 1rem 1.5rem 0;
+    padding: 1.1rem 1.5rem 0;
     background: var(--bg);
-    overflow-x: auto;
-    overflow-y: visible;
-    scrollbar-width: thin;
-    scrollbar-color: var(--line) transparent;
   }
-  .tabs::-webkit-scrollbar { height: 5px; }
-  .tabs::-webkit-scrollbar-track { background: transparent; }
-  .tabs::-webkit-scrollbar-thumb { background: var(--line); border-radius: 3px; }
 
   .tab {
     position: relative;
     flex: none;
     white-space: nowrap;
     font-family: "PT Mono", monospace;
-    font-size: 0.7rem;
+    font-size: 0.72rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
     text-decoration: none;
@@ -109,8 +103,9 @@
     background: var(--surface);
     border: 1px solid var(--line);
     border-bottom: none;
-    padding: 0.55rem 0.75rem 0.5rem;
-    border-radius: 4px 4px 0 0;
+    padding: 0.6rem 0.85rem 0.55rem;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 1px 0 var(--shadow);
     cursor: pointer;
   }
 
@@ -704,7 +699,7 @@
 
 <nav class="tabs" aria-label="Разделы досье">
   <a class="tab" href="#dossier" data-view="dossier">Досье</a>
-  <a class="tab" href="#method" data-view="method">Творчество и «Синефантом»</a>
+  <a class="tab" href="#method" data-view="method">Синефантом</a>
   <a class="tab" href="#gallery" data-view="gallery">Материалы</a>
   <a class="tab" href="#garage" data-view="garage">«Асса» и «Нанайнана»</a>
   <a class="tab" href="#choice" data-view="choice">«Дебил, как выбор»</a>
