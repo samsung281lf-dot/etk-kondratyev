@@ -1,43 +1,43 @@
 <title>Евгений Кондратьев</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=PT+Mono&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Stalinist+One&family=Oswald:wght@400;500;600;700&family=PT+Serif:ital,wght@0,400;0,700;1,400&family=PT+Mono&display=swap');
 
   :root {
-    --bg: #e2dfd6;
-    --surface: #d3cfc2;
-    --surface-2: #c8c3b3;
-    --ink: #211e1a;
-    --muted: #6f6a5e;
-    --line: #b6b0a0;
-    --accent: #c1501f;
-    --accent-ink: #ffffff;
-    --shadow: rgba(33, 30, 26, 0.16);
+    --bg: #ece5d2;
+    --surface: #e0d7bd;
+    --surface-2: #cfc09b;
+    --ink: #1c170f;
+    --muted: #675c40;
+    --line: #b6a97e;
+    --accent: #9c3324;
+    --accent-ink: #f3ead2;
+    --shadow: rgba(28, 23, 15, 0.18);
   }
 
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --bg: #16140f;
-      --surface: #211e18;
-      --surface-2: #2a261e;
-      --ink: #e7e2d3;
-      --muted: #96907e;
-      --line: #38332a;
-      --accent: #e8722e;
-      --accent-ink: #16140f;
-      --shadow: rgba(0, 0, 0, 0.45);
+      --bg: #16130c;
+      --surface: #221c10;
+      --surface-2: #2d2515;
+      --ink: #ece3c8;
+      --muted: #a5976e;
+      --line: #3c331e;
+      --accent: #c8543c;
+      --accent-ink: #16130c;
+      --shadow: rgba(0, 0, 0, 0.5);
     }
   }
 
   :root[data-theme="dark"] {
-    --bg: #16140f;
-    --surface: #211e18;
-    --surface-2: #2a261e;
-    --ink: #e7e2d3;
-    --muted: #96907e;
-    --line: #38332a;
-    --accent: #e8722e;
-    --accent-ink: #16140f;
-    --shadow: rgba(0, 0, 0, 0.45);
+    --bg: #16130c;
+    --surface: #221c10;
+    --surface-2: #2d2515;
+    --ink: #ece3c8;
+    --muted: #a5976e;
+    --line: #3c331e;
+    --accent: #c8543c;
+    --accent-ink: #16130c;
+    --shadow: rgba(0, 0, 0, 0.5);
   }
 
   * { box-sizing: border-box; }
@@ -141,16 +141,17 @@
     margin: 0;
   }
 
-  /* ---------- Film-strip divider ---------- */
+  /* ---------- Arrow-row divider (после схемы «движения») ---------- */
   .filmstrip {
-    height: 15px;
+    height: 14px;
     margin: 2.75rem 0;
-    background-color: var(--ink);
-    background-image: radial-gradient(circle at center, var(--bg) 3px, transparent 3.4px);
-    background-size: 22px 15px;
+    background-image:
+      linear-gradient(45deg, var(--ink) 23%, transparent 23.5%, transparent 76.5%, var(--ink) 77%),
+      linear-gradient(-45deg, var(--ink) 23%, transparent 23.5%, transparent 76.5%, var(--ink) 77%);
+    background-size: 18px 14px;
     background-repeat: repeat-x;
-    background-position: center;
-    border-radius: 2px;
+    background-position: 0 0;
+    opacity: 0.85;
   }
 
   /* ---------- Dossier hero ---------- */
@@ -216,9 +217,10 @@
   .hero .label { margin-bottom: 1.1rem; }
 
   .hero h1 {
-    font-size: clamp(2.6rem, 8vw, 4.2rem);
-    font-weight: 700;
-    line-height: 0.98;
+    font-family: "Stalinist One", "Oswald", "Arial Narrow", sans-serif;
+    font-size: clamp(2.3rem, 7.2vw, 3.7rem);
+    font-weight: 400;
+    line-height: 1.05;
     letter-spacing: 0.01em;
   }
 
@@ -242,15 +244,15 @@
 
   .stamp {
     display: inline-block;
-    border: 2px solid var(--accent);
-    color: var(--accent);
-    font-family: "PT Mono", monospace;
-    font-size: 0.85rem;
-    letter-spacing: 0.12em;
+    border: 3px solid var(--ink);
+    color: var(--ink);
+    font-family: "Stalinist One", "PT Mono", monospace;
+    font-size: 0.95rem;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     padding: 0.35em 0.7em;
     transform: rotate(-5deg);
-    border-radius: 2px;
+    border-radius: 0;
   }
 
   .stamp small {
@@ -291,9 +293,10 @@
   .hero-m .label { margin-bottom: 1.1rem; }
 
   .hero-m h1 {
-    font-size: clamp(2.1rem, 6.5vw, 3.1rem);
-    font-weight: 700;
-    line-height: 1.05;
+    font-family: "Stalinist One", "Oswald", "Arial Narrow", sans-serif;
+    font-size: clamp(1.9rem, 5.6vw, 2.7rem);
+    font-weight: 400;
+    line-height: 1.1;
   }
 
   .hero-m .lede {
